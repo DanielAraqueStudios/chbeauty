@@ -204,1235 +204,177 @@ margin-top:16px;
 
       </ul>
 
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterLinks = document.querySelectorAll('.properties-filter a');
+            const propertyItems = document.querySelectorAll('.property-item');
+    
+            filterLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remover la clase activa de todos los enlaces
+                    filterLinks.forEach(l => l.classList.remove('is_active'));
+                    // Añadir clase activa al enlace clickeado
+                    this.classList.add('is_active');
+    
+                    const filterValue = this.getAttribute('data-filter');
+    
+                    // Mostrar u ocultar elementos según el filtro
+                    propertyItems.forEach(item => {
+                        if (filterValue === '*' || item.classList.contains(filterValue.substring(1))) {
+                            item.style.display = 'block'; // Mostrar
+                        } else {
+                            item.style.display = 'none'; // Ocultar
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 
-
-
-
-
-
-      <!--begins each one elemet of the categories-->
-      
-      <div class="row properties-box">
-       
-
-        <!--hope this works-->
-
-
-
-
-
-        <div class="col-lg-12 align-self-center cosmetologia">
-          
-      </div> 
-
-
-      <!-- creator original
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-    <div class="item">
-        <a href="https://api.whatsapp.com/send?phone=573014024315">
-            <img src="assets/images/004.jpg" alt="Depilación Cera/BK Línea o Medio">
-        </a>
-        <span class="category">Cosmetología</span>
-        <h4>Depilación Cera/BK Línea o Medio</h4>
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h6>Ofrecido<br> por:</h6>
-                </div>
-                <div class="col-6">
+      <div class="property-item cosmetologia">
+        <h2>COSMETOLOGIA</h2>
+        <br>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img src="/assets/images/cosmetologia.jpg" alt="Cosmetología" class="imagen-ajustable">
+                <div class="icon-button">
+                  <a href="https://api.whatsapp.com/send?phone=573014024315">
+                      <i class="fa fa-calendar"></i> Agenda tu Cita
+                  </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+                
+                <h4 class="services-title">Servicios:</h4>
+                <div class="services-list">
                     <ul>
-                        <li>Marly Rodriguez</li>
-                        <li>Sara Cuartas</li>
-                        <li>Kenia Medina</li>
+                        <li>Depilación Cera/Axilas</li>
+                        <li>Depilación Cera/Bigote</li>
+                        <li>Depilación Cera/BK Completo</li>
+                        <li>Depilación Cera/BK Línea o Medio</li>
+                        <li>Depilación Cera/Brazos</li>
+                        <li>Depilación Cera/Cejas</li>
+                        <li>Depilación Cera/Espalda Baja</li>
+                        <li>Depilación Cera/Espalda Completa</li>
+                        <li>Depilación Cera/Facial Completa</li>
+                        <li>Depilación Cera/Muslos (Pierna Superior)</li>
+                        <li>Depilación Cera/Muslos y Pantorrilla (Pierna Completa)</li>
+                        <li>Depilación Cera/Nariz</li>
+                        <li>Depilación Cera/Ombligo</li>
+                        <li>Depilación Cera/Orejas</li>
+                        <li>Depilación Cera/Pantorrilla (Media Pierna inferior)</li>
+                        <li>Depilación Cera/Patillas/Menton</li>
+                        <li>Depilación Cera/Pecho</li>
+                        <li>Limpieza facial</li>
+                        <li>Masaje de Relajación</li>
+                        <li>Plasma Facial</li>
+                        <li>Relleno de Labios</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="main-button">
-            <a href="https://api.whatsapp.com/send?phone=573014024315">AGENDAR</a>
-        </div>
     </div>
-</div>
-      -->
-        
 
 
-    <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-        <div class="item">
-          <span class="category">Cosmetología</span>
-          <br>
-          <br>
-          <br>
 
-            <a href="https://api.whatsapp.com/send?phone=573014024315">
-                <img src="assets/images/cosmetologia.jpg" alt="Depilación Cera/BK Línea o Medio">
-            </a>
-
-            <br>
-          <br>
-          <br>
-          <div class="icon-button">
-            <a href="https://api.whatsapp.com/send?phone=573014024315"><i class="fa fa-calendar"></i> Agenda tu Cita</a>
+    <div class="property-item peluqueria">
+      <h2>PELUQUERÍA</h2>
+      <div class="row">
+          <div class="col-12 col-md-6">
+              <img src="assets/images/peluqueria.jpg" alt="Peluquería" class="imagen-ajustable">
+              <div class="icon-button">
+                <a href="https://api.whatsapp.com/send?phone=573014024315">
+                    <i class="fa fa-calendar"></i> Agenda tu Cita
+                </a>
+            </div>
           </div>
-            
-            
-        </div>
-    </div>
+          <div class="col-12 col-md-6">
+              
+              <h4 class="services-title">Servicios:</h4>
+              <div class="services-list">
+                  <ul>
+                      <li>Alisados</li>
+                      <li>Cepillado con ondas</li>
+                      <li>Cepillado Extensiones</li>
+                      <li>Cepillado Liso</li>
+                      <li>Cepillado puntas flotantes</li>
+                      <li>Cepillado y Peinado incluye trenzas</li>
+                      <li>Coloraciones Aplicar tintura</li>
+                      <li>Coloraciones/Iluminaciones Contornos Mechas</li>
+                      <li>Corte Dama</li>
+                      <li>Trenzas</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
 
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-          <div class="item">
+
+
+  <div class="property-item barberia">
+    <h2>BARBERÍA</h2>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <img src="assets/images/barberia.jpg" alt="Barbería" class="imagen-ajustable">
+            <div class="icon-button">
               <a href="https://api.whatsapp.com/send?phone=573014024315">
-                  
+                  <i class="fa fa-calendar"></i> Agenda tu Cita
               </a>
-              
-              <h4>Depilación Cera/Axilas</h4>
-              <div class="container">
-                  <div class="row">
-                      
-                  </div>
-              </div>
-             
           </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-        <div class="item">
-            
-                
-         
-            <h4>Depilación Cera/Bigote</h4>
-            <div class="container">
-                <div class="row">
-                    
-                </div>
-            </div>
-           
         </div>
-    </div>  
-
-    <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-      <div class="item">
-          <a href="https://api.whatsapp.com/send?phone=573014024315">
-              
-          </a>
-        
-          <h4>Depilación Cera/BK Completo</h4>
-          <div class="container">
-              <div class="row">
-                  
-              </div>
-          </div>
-        
-      </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-    <div class="item">
-        <a href="https://api.whatsapp.com/send?phone=573014024315">
+        <div class="col-12 col-md-6">
             
-        </a>
-        
-        <h4>Depilación Cera/BK Línea o Medio</h4>
-        <div class="container">
-            <div class="row">
-               
+            <h4 class="services-title">Servicios:</h4>
+            <div class="services-list">
+                <ul>
+                    <li>Barberia/Arreglo Barba</li>
+                    <li>Barberia/Corte Caballero</li>
+                    <li>Barberia/Corte niño</li>
+                </ul>
             </div>
         </div>
-      
     </div>
 </div>
 
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      <a href="https://api.whatsapp.com/send?phone=573014024315">
-          
-      </a>
-     
-      <h4>Depilación Cera/Brazos</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-     
-      <h4>Depilación Cera/Cejas</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-     
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-   
-      <h4>Depilación Cera/Espalda Baja</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-      
-      <h4>Depilación Cera/Espalda Completa</h4>
-      <div class="container">
-          <div class="row">
-             
-          </div>
-      </div>
-     
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-     
-      <h4>Depilación Cera/Espalda Completa</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-      
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-     
-     
-      <h4>Depilación Cera/Facial Completa</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-      
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-     
-      <h4>Depilación Cera/Muslos (Pierna Superior)</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-     
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-     
-      <h4>Depilación Cera/Muslos y Pantorrilla (Pierna Completa)</h4>
-      <div class="container">
-          
-      </div>
-     
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-
-      <h4>Depilación Cera/Nariz</h4>
-      <div class="container">
-          <div class="row">
-              
-              <div class="col-6">
-                
-              </div>
-          </div>
-      </div>
-   
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-      
-      <h4>Depilación Cera/Ombligo</h4>
-      <div class="container">
-          
-      </div>
-      
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-     
-
-      <h4>Depilación Cera/Orejas</h4>
-      <div class="container">
-          
-      </div>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-  
-      <h4>Depilación Cera/Pantorrilla (Media Pierna)</h4>
-      <div class="container">
-          
-      </div>
-    
-  </div>
-</div>
 
 
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-    
-      <h4>Depilación Cera/Patillas/Mentón</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-   
-      <h4>Depilación Cera/Pecho</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-     
-      <h4>Limpieza facial </h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-      
-      
-      <h4>Masaje de Relajación</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-     
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-     
-
-      <h4>Plasma Facial
-      </h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-    
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 cosmetologia">
-  <div class="item">
-     
-    
-      <h4>Relleno de Labios</h4>
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-     
-  </div>
-</div>
-        
-
-        
-
-         <!--end each one elemet of COSMETOLOGIA categories-->
-
-        <!--BEGINS peluqueria -->
-
-
-
-
-
-
-
-
-         <!-- Peluquería -->
-
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-
-   
-    <h4> Alisados</h4>
-    
-  
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    <span class="category">Peluquería</span>
-  <br>
-  <br>
-  <br>
-      <a href="https://api.whatsapp.com/send?phone=573014024315">
-          <img src="assets/images/peluqueria.jpg" alt="Depilación Cera/BK Línea o Medio">
-      </a>
-      <br>
-  <br>
-  <br>
-      <div class="icon-button">
-        <a href="https://api.whatsapp.com/send?phone=573014024315"><i class="fa fa-calendar"></i> Agenda tu Cita</a>
-      </div>
-      
-  </div>
-</div>
-<!--code for peluqieria
-
-  <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    <a href="property-details.html"><img src="assets/images/property-02.jpg" alt="Servicio Peluquería"></a>
-    <span class="category">Peluquería</span>
-    <h4> Cepillado con ondas
-    </h4>
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <h6>Ofrecido<br> por:</h6>
-        </div>
-        <div class="col-6">
-          <ul>
-            <li> Marly Rodriguez
-            </li>
-            <li>Luz Edilia Prado
-            </li>
-          </ul>
+<div class="property-item estilismo">
+  <h2>ESTILISMO</h2>
+  <div class="row">
+      <div class="col-12 col-md-6">
+          <img src="assets/images/0770.jpeg" alt="Estilismo" class="imagen-ajustable">
+          <div class="icon-button">
+            <a href="https://api.whatsapp.com/send?phone=573014024315">
+                <i class="fa fa-calendar"></i> Agenda tu Cita
+            </a>
         </div>
       </div>
-    </div>
-    <div class="main-button">
-      <a href="https://api.whatsapp.com/send?phone=573014024315">AGENDAR</a>
-    </div>
-  </div>
-</div>
-
--->
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    
-
-    <h4> Cepillado con ondas
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    
-    <h4>Cepillado Extensiones  </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    
- 
-    <h4> Cepillado Liso
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-
-    <h4> Cepillado puntas flotantes
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    
-    
-    <h4> Cepillado y Peinado incluye trenzas
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    
-    
-    <h4>Coloraciones Aplicar tintura
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    
-   
-    <h4>Coloraciones/Iluminaciones Contornos Mechas
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    
-   
-    <h4> Corte Dama 
-    </h4>
-   
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-    
-  
-    <h4>
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> Trenzas
-  </h4>
-    
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 peluqueria">
-  <div class="item">
-   
-   
-    <h4> 
-  </h4>
-    
-  </div>
-</div>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-
-
-<!-- Barbería -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
- 
-    <h4>Barberia/Arreglo Barba
-    </h4>
-    
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-   
-    
-    <h4>Barberia/Corte Caballero </h4>
-    
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    <span class="category">Barbería</span>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <a href="property-details.html"><img src="assets/images/barberia.jpg" alt="Servicio Barbería"></a>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="icon-button">
-      <a href="https://api.whatsapp.com/send?phone=573014024315"><i class="fa fa-calendar"></i> Agenda tu Cita</a>
-    </div>
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4>Barberia/Corte niño
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 barberia">
-  <div class="item">
-    
-   
-    <h4> 
-    </h4>
-    
-  </div>
-</div>
-
-
-
-<!-- Estilismo -->
-
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-
-  
-    <h4>Estilismo Profesional</h4>
-
-  </div>
-</div>
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-
-    <h4>Combo Laminado+Depi+Pigmento</h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    <span class="category">Estilismo</span>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <a href="property-details.html"><img src="assets/images/0770.jpeg" alt="Servicio Barbería"></a>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    <div class="icon-button">
-      
-      <a href="https://api.whatsapp.com/send?phone=573014024315"><i class="fa fa-calendar"></i> Agenda tu Cita</a>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-   
-    <h4>Depilación Barbera Cuchilla/Cejas</h4>
- 
-  </div>
-</div>
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-   
-    <h4>Depilación Hilo/Bigote</h4>
-    <div class="container">
-      <div class="row">
-        
+      <div class="col-12 col-md-6">
+          
+          <h4 class="services-title">Servicios:</h4>
+          <div class="services-list">
+              <ul>
+                  <li>Combo Laminado+Depi+Pigmento</li>
+                  <li>Depilación Barbera Cuchilla/Cejas</li>
+                  <li>Depilación Hilo/Bigote</li>
+                  <li>Depilación Hilo/Cejas</li>
+                  <li>Depilación Hilo/Facial</li>
+                  <li>Depilación Hilo/Menton</li>
+                  <li>Depilación Pinzas/Cejas</li>
+                  <li>Diseño Cejas</li>
+                  <li>Laminado de Cejas</li>
+                  <li>Lifting Pestañas</li>
+                  <li>Maquillaje Artístico Disfraces</li>
+                  <li>Maquillaje para Eventos</li>
+                  <li>Pegar Pestañas Enteras</li>
+                  <li>Pegar Pestañas Punto a Punto</li>
+                  <li>Sombreado de Cejas con Henna</li>
+                  <li>Valoración de Color</li>
+              </ul>
+          </div>
       </div>
-    </div>
-   
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-
-    <h4>Depilación Hilo/Cejas</h4>
- 
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-  
-    <h4>Depilación Hilo/Facial</h4>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-    <h4>Depilación Hilo/Facial</h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-  
-    <h4>Depilación Pinzas/Cejas</h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-
-    <h4>Diseño de Cejas</h4>
-   
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-   
-    <h4>Laminado de Cejas</h4>
-    
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
- 
-    <h4>Lifting Pestañas</h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-
-    <h4>Maquillaje Artístico Disfraces</h4>
-    
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-
-    <h4>Maquillaje para Eventos</h4>
-    
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-  
-    <h4>Pegar Pestañas Enteras</h4>
-    
   </div>
 </div>
 
@@ -1440,726 +382,73 @@ margin-top:16px;
 
 
 
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-   
-    <h4>Pegar Pestañas Punto a Punto</h4>
 
+
+<div class="property-item spacapilar">
+  <h2>SPA CAPILAR</h2>
+  <div class="row">
+      <div class="col-12 col-md-6">
+          <img src="assets/images/hair.jpg" alt="Spa Capilar" class="imagen-ajustable">
+          <div class="icon-button">
+            <a href="https://api.whatsapp.com/send?phone=573014024315">
+                <i class="fa fa-calendar"></i> Agenda tu Cita
+            </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+          
+          <h4 class="services-title">Servicios:</h4>
+          <div class="services-list">
+              <ul>
+                  <li>Matización</li>
+                  <li>Terapia de Reposición de Aminoácidos Bottox Capilar</li>
+                  <li>Terapia e Hidratación Capilar</li>
+                  <li>Lavado de cabello</li>
+              </ul>
+          </div>
+      </div>
   </div>
 </div>
 
 
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
+
+<div class="property-item spaunas">
+  <h2>SPA DE UÑAS</h2>
+  <div class="row">
+      <div class="col-12 col-md-6">
+          <img src="assets/images/uñas.jpg" alt="Spa de Uñas" class="imagen-ajustable">
+          <div class="icon-button">
+            <a href="https://api.whatsapp.com/send?phone=573014024315">
+                <i class="fa fa-calendar"></i> Agenda tu Cita
+            </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+          
+          <h4 class="services-title">Servicios:</h4>
+          <div class="services-list">
+              <ul>
+                  <li>Dipping</li>
+                  <li>Acrílicas</li>
+                  <li>Mantenimiento Acrílico</li>
+                  <li>Recubrimiento Acrílico</li>
+                  <li>Polygel</li>
+                  <li>PressOn</li>
+                  <li>Retoque de PressOn</li>
+                  <li>Retiro Acrílico o PressOn</li>
+                  <li>Manos con base Rubber</li>
+                  <li>Manos Semi Permanente</li>
+                  <li>Manos Tradicionales</li>
+                  <li>Pies Semi Permanente</li>
+                  <li>Pies Tradicionales</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
     
  
-    <h4>Sombreado de Cejas con Henna</h4>
-    
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>Valoración de Color</h4>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 estilismo">
-  <div class="item">
-    
-    <h4>                                                                   </h4>
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<!-- Spa Capilar -->
-
-
-
-
-
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>Lavado de cabello Shampoo Neutro
-    </h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-
-    <span class="category">Spa capilar</span>
-    <br>
-    <br>
-   
-
-    <a href="property-details.html"><img src="assets/images/hair.jpg" alt="Servicio Barbería"></a>
-    
-    <br>
-    <br>
-
-    
-
-    <div class="icon-button">
-      <a href="https://api.whatsapp.com/send?phone=573014024315"><i class="fa fa-calendar"></i> Agenda tu Cita</a>
-    </div>
-
-
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>Matizacion 
-    </h4>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-
-    <h4>Terapia de Reposicion de aminoacidos Bottox Capilar
-    </h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>Terapia e Hidratacion Capilar
-    </h4>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>Lavado de cabello con shampoo neutro
-    </h4>
-
-  </div>
-</div>
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spacapilar">
-  <div class="item">
-   
-
-    <h4>                                                                           </h4>
-
-  </div>
-</div>
-
-
-<!-- Spa de Uñas -->
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    <span class="category">Spa de Uñas</span>
-    <br>
-    <br>
-    <br>
-
-    <a href="property-details.html"><img src="assets/images/uñas.jpg" alt="Servicio Barbería"></a>
-    <br>
-    <br>
-    <br>
-    
-    <div class="icon-button">
-
-      <a href="https://api.whatsapp.com/send?phone=573014024315"><i class="fa fa-calendar"></i> Agenda tu Cita</a>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Polvo Restaurar algunas
-    </h4>
-
-  </div>
-</div>
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Polygel Restauracion completa
-    </h4>
-
-  </div>
-</div>
-
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Press On Nuevas
-    </h4>
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Dipping Nuevas
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Polvo Nuevas
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Polvo Restauracion completa
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Polvo Restaurar algunas
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Polygel Restauracion completa
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Acrilico/Press On Nuevas
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Manicure Semi Permanente con Rubber
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Manicure Semi Permanente Nuevas
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Manicure Tradicional Nuevas
-    </h4>
-
-  </div>
-</div>
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Pedicure Semi Permanente Nuevas
-    </h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Manicure Semi Permanente con Rubber
-    </h4>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Pedicure Tradicional Nuevas
-    </h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Manicure Semi Permanente Nuevas
-    </h4>
-
-  </div>
-</div>
-
-
-
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Manicure Tradicional Nuevas
-    </h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>
-    </h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Pedicure Semi Permanente Nuevas
-    </h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>
-    </h4>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 spaunas">
-  <div class="item">
-    
-
-    <h4>Pedicure Tradicional Nuevas
-    </h4>
-
-  </div>
-</div>
-
-
 
 
 
@@ -2294,6 +583,10 @@ margin-top:16px;
 <script src="assets/js/counter.js"></script>
 <script src="assets/js/custom.js"></script>
 
+<script>
+  
+
+</script>
 
 
 
@@ -2304,16 +597,8 @@ margin-top:16px;
 
 
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de Estilo</title>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> <!-- Asegúrate de incluir Font Awesome si lo usas -->
-    <style>
-        /* Aquí puedes agregar estilos CSS adicionales si es necesario */
-    </style>
+
+
 
 
     

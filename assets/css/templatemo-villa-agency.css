@@ -1852,3 +1852,104 @@ body {
 .mycontainer{
   border: #1e1e1e;
 }
+
+
+
+.property-item {
+  margin-bottom: 30px; /* Espacio entre las propiedades */
+}
+
+.imagen-ajustable {
+  width: 70% !important; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto !important; /* Mantiene la proporción de la imagen */
+  border-radius: 20px;
+}
+
+.icon-button {
+  margin: 15px 0; /* Espacio alrededor del botón */
+}
+
+.services-title {
+  margin: 20px 0 10px; /* Margen arriba y abajo para el título de servicios */
+  font-weight: bold; /* Hacer el texto más destacado */
+}
+
+.services-list {
+  margin-top: 10px; /* Espacio arriba de la lista de servicios */
+}
+
+.services-list ul {
+  padding-left: 20px; /* Espacio a la izquierda para la lista */
+}
+
+.services-list li {
+  margin-bottom: 8px; /* Espacio entre los elementos de la lista */
+}
+
+@media (max-width: 768px) {
+  .property-item img {
+      width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+      height: auto; /* Mantiene la proporción de la imagen */
+  }
+  .property-item h2 {
+      text-align: center; /* Centra el título en pantallas pequeñas */
+  }
+  .services-list {
+      text-align: left; /* Alinea la lista a la izquierda en pantallas pequeñas */
+  }
+}
+
+
+
+
+
+
+
+.property-item {
+  margin-bottom: 20px; /* Espacio entre los elementos de propiedad */
+}
+
+.imagen-ajustable {
+  width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Permite centrar la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.row {
+  display: flex; /* Utiliza flexbox para la disposición de columnas */
+  flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas más pequeñas */
+}
+
+.col-12 {
+  flex: 0 0 100%; /* Ocupa el 100% en pantallas pequeñas */
+}
+
+.col-md-6 {
+  flex: 0 0 50%; /* Ocupa el 50% en pantallas medianas y más grandes */
+}
+
+@media (max-width: 768px) {
+  .property-item {
+      text-align: center; /* Centra el texto y otros elementos dentro del item */
+  }
+
+  .property-item .col-md-6 {
+      flex: 0 0 100%; /* En pantallas pequeñas, las columnas ocupan el 100% */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
