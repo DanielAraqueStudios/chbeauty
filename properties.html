@@ -550,15 +550,19 @@ margin-top:16px;
     <div class="row">
       <div class="col-lg-8">
         <div class="section-heading">
-          <h6> Contáctanos!</h6>
-          <h2>Agenda ya mismo tu servico,<strong>en menos de 2 minutos será agendado!</strong></h2>
+          <h6> Visítanos</h6>
+          <h2>Estamos a un click de una <strong> transformacion radical</strong></h2>
         
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="icon-button">
-          <a href="https://api.whatsapp.com/send?phone=573014024315"><i class="fa fa-calendar"></i> Agenda tu Cita</a>
-        </div>
+        
+        <div class="video-container">
+          <video id="video-cta" width="100%" height="auto">
+              <source src="/assets/images/video-cta.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
       </div>
     </div>
   </div>
@@ -722,9 +726,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('video-cta');
+    video.volume = 0.7;
 
+    function checkVideoInView() {
+        const rect = video.getBoundingClientRect();
+        const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+        
+        if (isInView && !video.playing) {
+            video.play();
+        } else if (!isInView && video.playing) {
+            video.pause();
+        }
+    }
+
+    window.addEventListener('scroll', checkVideoInView);
+    window.addEventListener('resize', checkVideoInView);
+
+    // Initial check
+    checkVideoInView();
+});
+
+// Helper to check if video is playing
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+    get: function() {
+        return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+    }
+});
+</script>
 
 
 
