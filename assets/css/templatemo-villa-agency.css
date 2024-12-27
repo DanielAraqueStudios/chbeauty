@@ -786,6 +786,14 @@ Banner Style
   margin-bottom: 0px;
 }
 
+@media (max-width: 768px) {
+  .main-banner .item h2 {
+    font-size: 32px;
+    line-height: 42px;
+    width: 100%;
+  }
+}
+
 .main-banner .owl-dots {
   position: absolute;
   bottom: 60px;
@@ -962,7 +970,7 @@ Video Style
 */
 
 .video {
-  background-image: url(../images/video-bg.jpeg);
+  background-color: #0c0c0c;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -2001,6 +2009,48 @@ body {
 }
 
 
+
+
+h1 {
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  font-size: 2em; /* Ajusta el tamaño de la fuente según sea necesario */
+  margin: 0; /* Elimina márgenes adicionales */
+  padding: 0; /* Elimina rellenos adicionales */
+}
+
+.container {
+  width: 100%; /* Asegúrate de que el contenedor tenga suficiente ancho */
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+
+
+.container-footer {
+  display: block;
+}
+
+.footerimg {
+  max-width: 100px;
+  height: auto;
+}
+
+.logo h1 {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container-footer {
+      display: none; /* Hide logo container on mobile */
+  }
+  
+  .logo h1 {
+      font-size: 1.5em; /* Adjust text size for mobile */
+      text-align: center;
+      padding: 10px 0;
+  }
+}
 
 
 

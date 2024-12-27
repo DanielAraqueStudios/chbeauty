@@ -106,7 +106,7 @@ margin-top:16px;
                     </div>
                     <a href="index.html" class="logo">
                         
-                        <h1>CH_BEAUTY</h1>
+                        <h1>CH BEAUTY</h1>
 
                     </a>
                     <!-- ***** Logo End ***** -->
@@ -231,6 +231,9 @@ margin-top:16px;
     </div>
   </div>
   
+  <div class="video section" id="video-section">
+
+
   <div class="video section">
     <div class="container">
       <div class="row">
@@ -246,15 +249,19 @@ margin-top:16px;
   
   <div class="video-content">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <div class="video-frame">
-            <img src="assets/images/video-frame.jpeg" alt="Video del salón">
-            <a href="https://youtube.com" target="_blank"><i class="fa fa-play"></i></a>
-          </div>
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="video-frame">
+                    <video id="salon-video" width="100%" height="auto" loop>
+                        <source src="/assets/images/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+</div>
+
   </div>
   
   <div class="fun-facts">
@@ -635,6 +642,40 @@ margin-top:16px;
 <script src="assets/js/owl-carousel.js"></script>
 <script src="assets/js/counter.js"></script>
 <script src="assets/js/custom.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('salon-video');
+    const videoSection = document.getElementById('video-section');
+    
+    video.volume = 0.7;
+
+    function checkVideoVisibility() {
+        const rect = video.getBoundingClientRect();
+        const videoTop = rect.top;
+        const videoBottom = rect.bottom;
+        const windowHeight = window.innerHeight;
+        
+        // Check if video is at least 50% visible
+        if (videoTop < windowHeight * 0.5 && videoBottom > windowHeight * 0.5) {
+            if (video.paused) {
+                video.play();
+            }
+        } else {
+            if (!video.paused) {
+                video.pause();
+            }
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', checkVideoVisibility);
+    window.addEventListener('resize', checkVideoVisibility);
+
+    // Initial check
+    checkVideoVisibility();
+});
+</script>
 
 </body>
 </html>
